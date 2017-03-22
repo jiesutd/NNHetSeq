@@ -3,6 +3,7 @@ NNHetSeq Modified by Jie
 Modification:
 
 1.STACK_LSTMCRFMMLabeler.cpp add save base alphabets
+
 2. Extend base word alphabet and lookuptable by inserting new word from new alphabet
 
 NNHetSeq is a Bi-LSTM CRF based package for heterogeneous sequence labelling tasks. The system can be used for POS tagging, Named Entity Recognition, and other sequence labelling tasks. 
