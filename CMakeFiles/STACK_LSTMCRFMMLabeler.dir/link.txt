@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -w -msse3 -funroll-loops -O3 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/STACK_LSTMCRFMMLabeler.dir/STACK_LSTMCRFMMLabeler.cpp.o  -o STACK_LSTMCRFMMLabeler  -lopenblas 
