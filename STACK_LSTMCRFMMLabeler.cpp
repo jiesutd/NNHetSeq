@@ -560,6 +560,7 @@ void Labeler::train(const string& trainFile, const string& devFile, const string
     if (m_base_wordAlphabet.from_string(word) == -1) {
       m_base_wordAlphabet.set_fixed_flag(false);
       m_base_wordAlphabet.from_string(word);
+      m_base_wordAlphabet.set_fixed_flag(true);
     }
   }
   int extend_word_num = m_base_wordAlphabet.size() - old_base_word_num;

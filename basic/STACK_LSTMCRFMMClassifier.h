@@ -369,7 +369,6 @@ public:
         project[idx] = NewTensor<xpu>(Shape2(1, _hiddensize), d_zero);
         projectLoss[idx] = NewTensor<xpu>(Shape2(1, _hiddensize), d_zero);
 
-
         output[idx] = NewTensor<xpu>(Shape2(1, _labelSize), d_zero);
         outputLoss[idx] = NewTensor<xpu>(Shape2(1, _labelSize), d_zero);
       }

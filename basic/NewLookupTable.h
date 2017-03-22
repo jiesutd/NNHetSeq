@@ -48,25 +48,25 @@ public:
   }
 
 
-  inline void initial(const NRMat<dtype>& wordEmb) {
-    _nVSize = wordEmb.nrows();
-    _nDim = wordEmb.ncols();
+  // inline void initial(const NRMat<dtype>& wordEmb) {
+  //   _nVSize = wordEmb.nrows();
+  //   _nDim = wordEmb.ncols();
 
-    _E = NewTensor<xpu>(Shape2(_nVSize, _nDim), d_zero);
-    _gradE = NewTensor<xpu>(Shape2(_nVSize, _nDim), d_zero);
-    _eg2E = NewTensor<xpu>(Shape2(_nVSize, _nDim), d_zero);
-    _ftE = NewTensor<xpu>(Shape2(_nVSize, _nDim), d_one);
-    assign(_E, wordEmb);
-    for (int idx = 0; idx < _nVSize; idx++) {
-      norm2one(_E, idx);
-    }
+  //   _E = NewTensor<xpu>(Shape2(_nVSize, _nDim), d_zero);
+  //   _gradE = NewTensor<xpu>(Shape2(_nVSize, _nDim), d_zero);
+  //   _eg2E = NewTensor<xpu>(Shape2(_nVSize, _nDim), d_zero);
+  //   _ftE = NewTensor<xpu>(Shape2(_nVSize, _nDim), d_one);
+  //   assign(_E, wordEmb);
+  //   for (int idx = 0; idx < _nVSize; idx++) {
+  //     norm2one(_E, idx);
+  //   }
 
-    _bFineTune = true;
+  //   _bFineTune = true;
 
-    _max_update = 0;
-    _last_update.resize(_nVSize);
-    _last_update = 0;
-  }
+  //   _max_update = 0;
+  //   _last_update.resize(_nVSize);
+  //   _last_update = 0;
+  // }
 
     inline void initial(const LookupTable<xpu>& originTable, const int& extend_size) {
     _nVSize = originTable._nVSize + extend_size;
